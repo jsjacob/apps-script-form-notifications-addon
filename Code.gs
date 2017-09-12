@@ -28,19 +28,13 @@
  * A global constant String holding the title of the add-on. This is
  * used to identify the add-on in the notification emails.
  */
-var ADDON_TITLE = 'Form Notifications';
+var ADDON_TITLE = 'PO Water Sports Application Notifications';
 
 /**
  * A global constant 'notice' text to include with each email
  * notification.
  */
-var NOTICE = "Form Notifications was created as an sample add-on, and is meant for \
-demonstration purposes only. It should not be used for complex or important \
-workflows. The number of notifications this add-on produces are limited by the \
-owner's available email quota; it will not send email notifications if the \
-owner's daily email quota has been exceeded. Collaborators using this add-on on \
-the same form will be able to adjust the notification settings, but will not be \
-able to disable the notification triggers set by other collaborators.";
+var NOTICE = "";
 
 
 /**
@@ -91,7 +85,7 @@ function showAbout() {
       .setSandboxMode(HtmlService.SandboxMode.IFRAME)
       .setWidth(420)
       .setHeight(270);
-  FormApp.getUi().showModalDialog(ui, 'About Form Notifications');
+  FormApp.getUi().showModalDialog(ui, 'About PO Water Sports Application Notifications');
 }
 
 /**
@@ -269,7 +263,7 @@ function sendCreatorNotification() {
       template.notice = NOTICE;
       var message = template.evaluate();
       MailApp.sendEmail(settings.getProperty('creatorEmail'),
-          form.getTitle() + ': Form submissions detected',
+          form.getTitle() + ': Application submissions detected',
           message.getContent(), {
             name: ADDON_TITLE,
             htmlBody: message.getContent()

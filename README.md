@@ -1,7 +1,7 @@
-Form Notifications Add-on for Google Forms
-==========================================
+PO Water Sports Application Notifications Add-on for Google Forms
+=================================================================
 
-A sample Google Apps Script add-on for Google Forms.
+PO Water Sports Application Notifications Apps Script add-on for Google Forms.
 
 Introduction
 ------------
